@@ -2,12 +2,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #111;
+    background-color: black;
 }
-
 .row_poster {
     width: 100%;
     object-fit: contain;
@@ -15,7 +13,6 @@ body{
     margin-right: 10px;
     transition: transform 450ms;
 }
-
 .row_posters {
     display: flex;
     overflow-y: hidden;
@@ -23,51 +20,46 @@ body{
     padding: 20px;
     gap: 0.65rem;
 }
-
 .row_poster:hover {
     transform: scale(1.08);
 }
-
 .row_posters::-webkit-scrollbar {
     display: none;
 }
-
 .row_posterLarge {
     max-height: 250px;
 }
-
 .row_posterLarge:hover {
     transform: scale(1.09);
 }
-
 .row {
     color: white;
-    margin-left: 20px;
+    background-color: #000000;
+    border: 3px solid #ed0914;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
-
 .banner {
-    background-image: url("images/lib_books.png");
-    background-size: cover;
     background-position: center center;
+    background-image: url("lib_books.png");
     color: white;
     object-fit: contain;
-    height: 448px;
-    opacity:0.5;
-    background-color: #000000;
+    height: 575px;
 }
-
 .banner_contents {
     margin-left: 30px;
     padding-top: 180px;
     height: 190px;
 }
-
 .banner_title {
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
+    position: relative;
+    z-index: 15;
 }
-
 .banner_description {
     width: 45rem;
     line-height: 1.3;
@@ -76,7 +68,6 @@ body{
     max-width: 360px;
     height: 180px;
 }
-
 .banner_button {
     cursor: pointer;
     color: #fff;
@@ -91,26 +82,11 @@ body{
     padding-bottom: 0.5rem;
     background-color: rgba(0,0,0,0.75);
 }
-
-.banner_button:hover {
-    color: #000;
-    background-color: #e6e6e6;
-    transition: all 0.2s;
-}
-
 .banner--fadeBottom{
     margin-top: 145px;
-    height: 7.4rem;
+    height: 15rem;
     background-image: linear-gradient(180deg, transparent, rgba(37,37,37,0.61),#111);
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
-    border: border-box;
-}
-
 .navbar{
     height: 100px;
     color: white;
@@ -119,26 +95,24 @@ body{
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    border-bottom: 3px solid #ed0914;
 }
-
 .nav-logo{
     height: 80px;
     width: 150px;
 }
-.logo{
-    background-image: url("images/BookFlix logo.jpeg");
-    background-size: cover;
+.logo-img{
+    cursor: pointer;
     margin-top: 5px;
     height: 80px;
     width: 250px;
 }
-
 .nav-books {
     font-size: 1rem;
     border: none;
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 18px;
 }
 .nav-books a{
     font-size: 1rem;
@@ -146,7 +120,6 @@ body{
     border: none;
     text-decoration: none;
 }
-
 .nav-search{
     justify-content: space-evenly;
     display: flex;
@@ -158,12 +131,12 @@ body{
 .search-input{
     width: 100%;
     height: 35px;
-    background-color: #f3f3f3;
+    background-color: black;
+    color: white;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
     font-size: 1rem;
-    background-color: transparent;
     padding: 8px 12px;
     border-radius: 4px;
 }
@@ -183,29 +156,11 @@ body{
     border-bottom-right-radius: 4px;
     font-size: 1.2rem;
 }
-.btn{
-    padding: 12px 12px;
-    color: white;
-    background-color: #ed0914;
-    display: flex;
-    font-weight: bold;
-}
-
-.nav-cart{
-    display: flex;
-}
-#cart-icon{
-    font-size: 2rem;
-}
-#text-cart{
-    font-size: 1.20rem;
-    margin-top: 0px;
-}
-
-.nav-cart{
+.nav-sign{
     display: flex;
     color: white;
     background-color: #ed0914;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
@@ -214,20 +169,44 @@ body{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.cart-btn{
-    padding: 7px 4px;
+.sign-btn{
+    padding: 8px 10px;
     color: white;
     background-color: #ed0914;
     display: flex;
     font-weight: bold;
     border: none;
-    font-size: 0.95rem;
+}
+.nav-sign a{
+    text-decoration: none;
 }
 #cart-icon{
-    padding: 5px;
+    font-size: 2rem;
+    margin-right: 8px;
+    margin-left: 2px;
+}
+#text-cart{
+    font-size: 0.95rem;
+    margin-top: 0px;
+    font-weight: bold;
+}
+.nav-cart{
+    display: flex;
+    color: white;
+    background-color: #ed0914;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#cart-icon{
+    padding: 4.25px 9px;
     background-color: #ed0914;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -274,10 +253,8 @@ footer{
     color: #ffffff;
 }
 .end-logo{
-    background-image: url("images/BookFlix logo.jpeg");
-    background-size: cover;
     margin-top: 15px;
     height: 70px;
     width: 230px;
-   
+    cursor: pointer;
 }
