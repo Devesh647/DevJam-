@@ -3,40 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookflix</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <div class="main">
+    <div class="main">
             <div class="navbar">
             <div class="nav-logo">
-                <div class="logo"></div>
+                <div class="logo">
+                    <a id="home" href="index.html">
+                        <img src="bookflix logo.jpeg" class="logo-img"></img>
+                    </a>
+                </div>
             </div>
             <div class="nav-books">
-                <a id="books" href="link"> All Books</a>
-                <a id="genres"href="link">Genres</a>
-                <a id="mood"href="link">Mood</a>
+                <a id="books" href="all books.html"> All Books</a>
+                <a id="genres"href="genre.html">Genres</a>
+                <a id="mood"href="mood.html">Mood</a>
             </div>
             <div class="nav-search"> 
                 <input class="search-input" placeholder="Search Books/Authors"> </input>
                 <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
             </div>
+            <div class="nav-cart">
+                <i id="cart-icon"class="fa-solid fa-cart-arrow-down"></i>
+                <a href="cart.html">
+                    <button class="btn">Cart</button>
+                </a>
+            </div>
             <div class="nav-sign">
                 <i id="sign-icon" class="fa-solid fa-user"></i>
                 <a href="https://devesh647.github.io/">
-                    <button class="sign-btn">Sign In</button>
+                    <button class="btn">Sign In</button>
                 </a>
             </div>
-            <div class="nav-cart">
-                <i id="cart-icon"class="fa-solid fa-cart-arrow-down"></i>
-                <button class="cart-btn">Cart</button>
+    </div>
+    <div class="banner">
+        <div class="banner_contents">
+            <h1 class="banner_title">A Perfect Place for readers!</h1>
+            
+            <div class="banner_description">
+                A platform for book lovers!
             </div>
         </div>
-        <div class="box"></div>
+        <div class="banner--fadeBottom"></div>
+    </div><div class="row">
+        <h2>BOOKFLIX ORIGINALS</h2>
+        <div class="row_posters">
+            <img src="book1.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book2.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book3.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book4.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book5.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book6.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book7.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book8.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book9.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book10.jpg" alt="" class="row_poster row_posterLarge"/>
         </div>
-   </header> 
+    </div>
+    <br/>
+    <div class="row">
+        <h2>Best Sellers</h2>
+        <div class="row_posters">
+            <img src="book11.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book12.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book13.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book14.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book15.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book16.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book17.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book18.jpg" alt="" class="row_poster row_posterLarge"/>
+            <img src="book19.jpg" alt="" class="row_poster row_posterLarge"/>
+
+        </div>
+    </div>
+    
 </body>
 <footer>
     <div class="address">
@@ -55,7 +98,11 @@
             <a href="link">Contact us</a>  
         </ul> 
     </div>  
-    <div class="end-logo"></div>
+    <div class="end-logo">
+        <a id="home" href="index.html">
+            <img src="bookflix logo.jpeg" class="logo-img"/></img>
+        </a>
+    </div>
     
     
 </footer>
