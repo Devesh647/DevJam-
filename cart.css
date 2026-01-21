@@ -1,0 +1,62 @@
+#temp{
+    width: 167px;
+    z-index: 1;
+}
+body{
+    font-family: Arial, sans-serif;
+    background:black;
+    color:#fff;
+    padding: 25px 60px;
+    background: url("lib_books.png");
+    background-position: contain;
+}
+h1{
+  margin-bottom:20px;
+}
+.cart-container{
+  max-width:900px;
+  margin: auto;
+  z-index: 1;
+}
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#1c1c1c;
+  padding:15px;
+  margin-bottom:10px;
+  border-radius:8px;
+}
+.cart-item img{
+  width:70px;
+  border-radius:5px;
+}
+.item-info{
+  flex:1;
+  margin-left:15px;
+}
+.item-info h3{
+  margin:0 0 5px 0;
+}
+.price{
+  font-weight:bold;
+}
+button{
+  background:#e50914;
+  border:none;
+  color:white;
+  padding:8px 12px;
+  border-radius:5px;
+  cursor:pointer;
+}
+.summary{
+  margin-top:20px;
+  background:#1c1c1c;
+  padding:20px;
+  border-radius:8px;
+}
+.summary button{
+  width:100%;
+  padding:12px;
+  font-size:16px;
+}

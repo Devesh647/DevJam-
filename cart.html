@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BookFlix | Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+    <nav>
+        <a href="index.html"><img id="temp" src="BookFlix logo.jpeg" alt="logo"></a>
+    </nav>
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <div class="summary">
+      <h2>Total: ₹<span id="total">0</span></h2>
+      <button onclick="checkout()">Proceed to Checkout</button>
+      </a>
+    </div>
+  </div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [
+  {id:1, title:"The Alchemist", price:199, img:"https://covers.openlibrary.org/b/id/8231856-L.jpg"},
+  {id:2, title:"Atomic Habits", price:249, img:"https://covers.openlibrary.org/b/id/10594774-L.jpg"}
+];
+
+function renderCart(){
+  const cartItems = document.getElementById("cart-items");
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+    cartItems.innerHTML += `
+      <div class="cart-item">
+        <img src="${item.img}">
+        <div class="item-info">
+          <h3>${item.title}</h3>
+          <p class="price">₹${item.price}</p>
+        </div>
+        <button onclick="removeItem(${index})">Remove</button>
+      </div>
+    `;
+  });
+
+  document.getElementById("total").innerText = total;
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function removeItem(index){
+  cart.splice(index,1);
+  renderCart();
+}
+
+function checkout(){
+  alert("Checkout successful");
+  cart = [];
+  localStorage.removeItem("cart");
+  renderCart();
+}
+
+renderCart();
+</script>
+
+</body>
+</html>
+
