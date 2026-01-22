@@ -1,0 +1,61 @@
+.description-container {
+            display: flex;
+            padding: 100px 50px;
+            background-color: #111;
+            min-height: 80vh;
+            gap: 50px;
+        }
+        .book-large-img {
+            width: 300px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+ .close-btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+.details h1 { 
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+    color: #ffffff;
+}
+
+.details h3 { 
+    color: #e5e5e5;
+    margin-bottom: 20px; 
+}
+
+.details p { 
+    line-height: 1.6; 
+    max-width: 600px; 
+    margin-bottom: 30px; 
+    color: #cccccc;
+}
+        .buy-now-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }

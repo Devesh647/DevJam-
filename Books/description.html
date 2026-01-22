@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Description - BookFlix</title>
+    <link rel="stylesheet" href="description.css">
+</head>
+<body>
+    <button class="close-btn" onclick="window.history.back()">✕</button>
+    <div class="description-container">
+        <div class="poster-side">
+            <img id="book-cover" src="" alt="" class="book-large-img">
+        </div>
+        <div class="details">
+            <h1 id="book-title">Loading...</h1>
+            <h3 id="book-author"></h3>
+            <p id="book-desc"></p>
+            <button class="buy-now-btn" onclick="addToCart()">ADD TO CART - <span id="book-price"></span></button>
+        </div>
+    </div>
+
+    <script src="desc-script.js"></script>
+</body>
+</html>
